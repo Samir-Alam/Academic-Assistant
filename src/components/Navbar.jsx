@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
+import Dropdown from "./dropdown";
 
 const Navbar = () => {
   const [active, setActive] = useState(" ");
@@ -28,6 +29,7 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+        <Dropdown />
       </ul>
     </div>
   );

@@ -58,6 +58,7 @@ export default {
         "student2": "url('/src/assets/student2.jpg')",
         "student3": "url('/src/assets/student3.jpg')",
         "student4": "url('/src/assets/student4.jpg')",
+        "cyberpunk": "url(./src/assets/login/login_bg.jpeg)"
       },
     },
   },

@@ -4,7 +4,7 @@ import { textVariant } from "../utils/motion";
 
 const Hero = () => {
   return (
-    <section className="absolute w-full h-screen mx-auto bg-hero-pattern3 bg-cover ">
+    <section className="relative w-full h-screen mx-auto bg-hero-pattern3 bg-cover ">
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-10  paddingX flex flex-row items-start gap-5`}
       >
