@@ -2,9 +2,7 @@ import Navbar from '../components/Navbar'
 
 const UserProfile = () => {
   return (
-    <div>
       <Navbar />
-    </div>
   )
 }
 

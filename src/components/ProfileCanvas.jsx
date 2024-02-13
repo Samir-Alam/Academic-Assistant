@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 const ProfileCanvas = () => {
   return (
     <div>
-      <Navbar />
+      
     </div>
   )
 }
