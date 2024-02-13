@@ -7,7 +7,7 @@ const ProfileCanvas = () => {
   let male = true;
 
   return (
-    <div className="bg-darkPrimary h-max pb-16">
+    <div className="bg-darkPrimary h-max pb-16 flex flex-col justify-center items-center text-center">
       <motion.div
         variants={textVariant()}
         initial="hidden"
