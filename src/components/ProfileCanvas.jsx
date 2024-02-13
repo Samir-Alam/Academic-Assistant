@@ -4,8 +4,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 // import Profile from "../components/Profile";
 
 const ProfileCanvas = () => {
+  let male = true;
+
   return (
-    <div className="bg-darkPrimary h-max">
+    <div className="bg-darkPrimary h-max pb-16">
       <motion.div
         variants={textVariant()}
         initial="hidden"
@@ -16,16 +18,24 @@ const ProfileCanvas = () => {
         <p className="sectionSubText">~~~~~~💖~~~~~~</p>
       </motion.div>
       <motion.div
-        variants={fadeIn("left", "spring", 0.3, 1)}
+        variants={fadeIn("", "spring", 0.3, 1)}
         initial="hidden"
         animate="show"
+        className="bg-darkGrey h-max w-max m-10 p-10 rounded-xl flex flex-col justify-center text-center"
       >
-        <div className="flex flex-col items-center justify-center bg-darkGrey h-[5em] w-max mx-auto mt-10 rounded-xl">
-
-        </div>
-        <div>
-
-        </div>
+        {male ? 
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Student.png" alt="Student" width="175" height="175" />
+        : 
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Woman%20Student.png" alt="Woman Student" width="175" height="175" />
+        }
+        <h2 className="sectionHeadText">My Name</h2>
+        <p className="sectionSubText">~~~~~~💖~~~~~~</p>
+        <h2 className="sectionHeadText">Roll</h2>
+        <p className="sectionSubText">~~~~~~💖~~~~~~</p>
+        <h2 className="sectionHeadText">My Name</h2>
+        <p className="sectionSubText">~~~~~~💖~~~~~~</p>
+        <h2 className="sectionHeadText">My Name</h2>
+        <p className="sectionSubText">~~~~~~💖~~~~~~</p>
       </motion.div>
     </div>
   )
