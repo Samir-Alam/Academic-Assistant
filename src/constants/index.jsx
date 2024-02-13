@@ -1,19 +1,19 @@
-import student1 from "../assets/student1.jpg";
+// import student1 from "../assets/student1.jpg";
 import Coding_club from "../assets/clubs/Coding_club.jpg";
 import Hardware_club from "../assets/clubs/Hardware_club.jpg";
-import Hardware_club_1 from "../assets/clubs/Hardware_club_1.jpg";
+// import Hardware_club_1 from "../assets/clubs/Hardware_club_1.jpg";
 import Photography_club from "../assets/clubs/Photography_club.jpg";
 import Robotics_club from "../assets/clubs/Robotics_club.png";
 import Science_club from "../assets/clubs/Science_club.jpg";
-import Science_club_1 from "../assets/clubs/Science_club_1.jpg";
+// import Science_club_1 from "../assets/clubs/Science_club_1.jpg";
 import Tech_club from "../assets/clubs/Tech_club.jpeg";
 
 import Dancing from "../assets/events/Dancing.jpeg";
 import Singing from "../assets/events/Singing.jpg";
 import Sports from "../assets/events/Sports.jpeg";
 import Technova from "../assets/events/Technova.jpeg";
-import { UserCircle2 } from "lucide-react";
-import Dropdown from "../components/dropdown";
+// import { UserCircle2 } from "lucide-react";
+// import Dropdown from "../components/dropdown";
 import bba from "../assets/branch/bba.jpeg"
 import bca from "../assets/branch/bca.jpeg"
 import civil from "../assets/branch/civil.jpeg"

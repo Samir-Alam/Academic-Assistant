@@ -1,17 +1,14 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
-import Dropdown from "./dropdown";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
-  const [active, setActive] = useState(" ");
   return (
     <div className="navbar flex px-5 w-full bg-darkGrey justify-between top-0 z-20">
       <Link
         to="/"
         className="flex items-center gap-2"
         onClick={() => {
-          setActive("");
           window.scrollTo(0, 0);
         }}
       >
