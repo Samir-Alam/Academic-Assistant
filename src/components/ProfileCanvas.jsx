@@ -5,14 +5,17 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProfileCanvas = () => {
   return (
-    <motion.div
-    variants={textVariant(fadeIn("down", "spring", 1, 1))}
-    initial="hidden"
-    animate="show"
-    className="text-center pt-10"
-    >
-      My Profile
-    </motion.div>
+    <div>
+
+      <motion.div
+      variants={textVariant(fadeIn("down", "spring", 1, 1))}
+      initial="hidden"
+      animate="show"
+      className="text-center pt-10"
+      >
+        My Profile
+      </motion.div>
+    </div>
   )
 }
 
