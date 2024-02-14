@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const LibraryCard = ({ index, name, id, image }) => {
     return (
       <motion.div
-        variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+        variants={fadeIn("up", "spring", index * 0.3, 0.5)}
         initial="hidden"
         animate="show"
       >
