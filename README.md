@@ -6,4 +6,8 @@
 
 ## Tech Stack <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="28" height="27" />
 
-* Languages - HTML
+* __Languages__ - _HTML, CSS and JavaScript_
+* __Framework__ - _Tailwind CSS, React JS_
+* __Libraries__ - _React Router, React Tilt, Framer motion, EmailJS_
+* __Databases__ - _Firebase RTDB_
+* __Hosting__ -   _Firebase Hosting_
