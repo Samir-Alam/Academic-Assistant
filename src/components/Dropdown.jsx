@@ -41,7 +41,7 @@ const Dropdown = () => {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link
                   to="/attend"
@@ -53,7 +53,7 @@ const Dropdown = () => {
                   Attendance
                 </Link>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item>
               {({ active }) => (
                 <Link
