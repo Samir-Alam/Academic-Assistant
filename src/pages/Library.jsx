@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar'
 import LibraryCanvas from '../components/LibraryCanvas'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 const Library = () => {
   return (
