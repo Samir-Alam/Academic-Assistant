@@ -55,4 +55,12 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- CONTACT -->
+## Contact
+
+Samir : 
+- [Twitter](https://twitter.com/Samiralam00) 
+- [LinkedIn](https://www.linkedin.com/in/samir-webdeveloper/) 
+- [GitHub](https://github.com/Samir-Alam)
+
+Project Link: [Academic Assitant Repo](https://github.com/Samir-Alam/Academic-Assistant)
