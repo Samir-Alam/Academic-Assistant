@@ -1,4 +1,3 @@
-import React from 'react'
 import {Globe, Instagram, Linkedin} from 'lucide-react'
 import logo from '../assets/aca_assis.svg'
 
