@@ -32,10 +32,10 @@ const ProfileCanvas = () => {
         <p className="sectionSubText">~~~~~~💖~~~~~~</p>
         <h2 className="sectionHeadText">Roll</h2>
         <p className="sectionSubText">~~~~~~💖~~~~~~</p>
-        <h2 className="sectionHeadText">My Name</h2>
+        {/* <h2 className="sectionHeadText">My Name</h2>
         <p className="sectionSubText">~~~~~~💖~~~~~~</p>
         <h2 className="sectionHeadText">My Name</h2>
-        <p className="sectionSubText">~~~~~~💖~~~~~~</p>
+        <p className="sectionSubText">~~~~~~💖~~~~~~</p> */}
       </motion.div>
     </div>
   )
