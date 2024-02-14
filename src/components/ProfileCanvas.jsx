@@ -21,7 +21,7 @@ const ProfileCanvas = () => {
         variants={fadeIn("", "spring", 0.3, 1)}
         initial="hidden"
         animate="show"
-        className="bg-darkGrey h-max w-max m-10 p-10 rounded-xl flex flex-col justify-center text-center"
+        className="bg-darkGrey h-max w-max m-10 p-10 rounded-xl flex flex-col justify-center items-center align-middle text-center"
       >
         {male ? 
         <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Student.png" alt="Student" width="175" height="175" />
