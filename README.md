@@ -6,4 +6,4 @@
 
 ## Tech Stack <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="28" height="27" />
 
-* Languages
+* Languages - HTML
