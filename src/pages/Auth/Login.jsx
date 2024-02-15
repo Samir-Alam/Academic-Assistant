@@ -2,7 +2,10 @@ import { useState } from "react";
 import InputControl from "../../components/InputControl";
 import { Link, useNavigate } from "react-router-dom";
 import { LogIn } from "lucide-react";
-import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { signInWithEmailAndPassword,
+  //  updateProfile 
+  } 
+   from "firebase/auth";
 import { auth } from "../../firebase";
 
 const Login = () => {
@@ -28,7 +31,7 @@ const Login = () => {
       .then(async (res) => {
         setSubmitButtonDisabled(false);
         navigate("/home");
-        // console.log(user);
+        console.log(res);
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
