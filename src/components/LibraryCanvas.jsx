@@ -18,7 +18,7 @@ const LibraryCard = ({ index, name, id, image }) => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-darkGrey p-5 rounded-2xl sm:w-[360px] w-full hover:shadow-card"
+          className="bg-darkGrey p-5 max-xs:p-4 rounded-2xl sm:w-[360px] w-full max-xs:w-[90vw] hover:shadow-card"
         >
           <Link to={`/${id}`}>
             <div className="relative w-full h-[230px]">
@@ -64,7 +64,7 @@ const LibraryCanvas = () => {
         </motion.p>
       </div>
 
-      <div className="ml-20 mt-20 flex flex-wrap gap-7">
+      <div className="ml-20 max-xs:ml-5 mt-20 max-xs:mt-10 flex flex-wrap gap-7 max-xs:gap-4">
         {branches.map((branch, index) => (
           <LibraryCard key={`branch-${index}`} index={index} {...branch} />
         ))}
