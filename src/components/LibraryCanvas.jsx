@@ -51,14 +51,16 @@ const LibraryCanvas = () => {
         <h2 className="sectionHeadText">Library</h2>
       </motion.div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full max-xs:w-[90%] flex justify-center max-xs:ml-5">
         <motion.p
           variants={fadeIn("right", "", 0.1, 1)}
           initial="hidden"
           animate="show"
-          className="mt-3 text-light2 text-[17px] max-w-3xl leading-[30px] backdrop-blur-md bg-darkGrey bg-opacity-50 rounded-2xl border-transparent p-3"
+          className="mt-3 text-light2 text-[17px] max-xs:text-[10px] max-xs:font-mono max-w-3xl leading-[30px] backdrop-blur-md bg-darkGrey bg-opacity-50 rounded-2xl border-transparent p-3"
         >
-          The Library&apos;s extensive collection of books, spanning a myriad of genres and disciplines, forms the bedrock of its intellectual offerings. From timeless classics to cutting-edge research materials, the library&apos;s shelves hold the keys to unlocking a world of knowledge and understanding. Whether delving into the depths of historical narratives, unraveling the mysteries of scientific breakthroughs, or immersing oneself in the imaginative realms of literature, the library provides a boundless source of intellectual enrichment.
+          The Library&apos;s extensive collection of books, spanning a myriad of genres and disciplines, forms the bedrock of its intellectual offerings.
+            {window.screen.width > 750 &&
+            "From timeless classics to cutting-edge research materials, the library&apos;s shelves hold the keys to unlocking a world of knowledge and understanding. Whether delving into the depths of historical narratives, unraveling the mysteries of scientific breakthroughs, or immersing oneself in the imaginative realms of literature, the library provides a boundless source of intellectual enrichment."}
         </motion.p>
       </div>
 
