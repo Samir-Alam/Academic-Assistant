@@ -69,7 +69,7 @@ const Contact = () => {
         className="flex-[0.75] bg-darkGrey p-8 rounded-2xl ml-8"
       >
         <p className="sectionSubText">Get in touch</p>
-        <h3 className="sectionHeadText">Contact.</h3>
+        <h3 className="sectionHeadText">Contact</h3>
 
         <form
           ref={formRef}
