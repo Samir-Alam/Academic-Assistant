@@ -61,12 +61,12 @@ const Contact = () => {
       );
   };
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden w-[100vw] justify-center`}>
+    <div className={`xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden w-[100vw] max-xs:w-[90vw] justify-center`}>
         <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         initial="hidden"
         animate="show"
-        className="flex-[0.75] bg-darkGrey p-8 rounded-2xl ml-8"
+        className="flex-[0.75] bg-darkGrey p-8 max-xs:p-6 rounded-2xl ml-8 max-xs:ml-8"
       >
         <p className="sectionSubText">Get in touch</p>
         <h3 className="sectionHeadText">Contact</h3>
@@ -74,7 +74,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-12 max-xs:mt-6 flex flex-col gap-8 max-xs:gap-6"
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4 max-xs:mb-2">Your Name</span>
@@ -119,14 +119,17 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div
+      {window.screen.width > 750 
+      &&
+        <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         initial="hidden"
         animate="show"
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] mt-40"
-      >
+        >
         <img src={contact} alt="contact" />
       </motion.div>
+      }
     </div>
   )
 }
