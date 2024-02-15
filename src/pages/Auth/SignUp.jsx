@@ -1,3 +1,4 @@
+import { useState } from "react";
 import InputControl from "../../components/InputControl";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
