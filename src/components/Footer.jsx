@@ -3,11 +3,11 @@ import logo from '../assets/aca_assis.svg'
 
 const Footer = () => {
   return (
-    <div className="flex gap-5 justify-center items-center bg-cover bg-center relative mt-20">
+    <div className="flex gap-5 justify-center items-center bg-cover bg-center relative mt-20 max-xs:mt-15">
       <div className="absolute top-0 left-[10%] w-[80%] h-full backdrop-blur-sm bg-darkGrey rounded-lg"></div>
       <div className="z-10 relative px-5 py-7 flex gap-5 justify-between items-center w-[80%]">
-        <img src={logo} alt="logo" className="w-12 h-15 object-contain rounded-full" />
-        <p className="sm:text-[18px] text-[16px] font-bold font-mono text-white uppercase tracking-wider text-center">
+        <img src={logo} alt="logo" className="w-12 max-xs:w-8 h-15 object-contain rounded-full" />
+        <p className="sm:text-[18px] text-[16px] max-xs:text-[8px] font-bold font-mono text-white uppercase tracking-wider text-center">
           ASANSOL ENGINEERING COLLEGE
         </p>
         <div className="social-icon">
