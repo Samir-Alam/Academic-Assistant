@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import InputControl from "../../components/InputControl";
 import { Link, useNavigate } from "react-router-dom";
 import { LogIn } from "lucide-react";
@@ -40,7 +40,7 @@ const Login = () => {
   return (
     <div className="bg-cyberpunk bg-contain h-[100vh] w-[100vw] flex justify-center items-center">
       <div className="h-[100vh] w-full opacity-70 fixed bg-slate-950"></div>
-      <div className="h-fit w-[40%] z-10 purple_gradient bg-gradient-to-b p-5 rounded-lg backdrop-filter backdrop-blur-lg glow">
+      <div className="h-fit w-[40%] xs2:w-[80%] xs:w-[70%] sm:w-[50%] md:w-[50%] lg:w-[40%] z-10 purple_gradient bg-gradient-to-b p-5 rounded-lg backdrop-filter backdrop-blur-lg glow">
         <h1 className="text-white font-bold md:text-[40px] sm:text-[30px] text-[25px]">
           Login
         </h1>

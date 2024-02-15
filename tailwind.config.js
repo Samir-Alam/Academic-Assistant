@@ -47,6 +47,7 @@ export default {
       },
       screens: {
         xs: "450px",
+        xs2: "350px"
       },
       backgroundImage: {
         "hero-pattern1": "url('/src/assets/bg-1.jpg')",
