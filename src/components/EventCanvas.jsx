@@ -3,7 +3,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Coding_club from '../assets/clubs/Coding_club.jpg';
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import {events} from '../constants'
