@@ -51,12 +51,12 @@ const ClubCanvas = () => {
         <h2 className="sectionHeadText">CLUBS</h2>
       </motion.div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full max-xs:w-[90%] flex justify-center max-xs:ml-5">
         <motion.p
           variants={fadeIn("right", "", 0.1, 1)}
           initial="hidden"
           animate="show"
-          className="mt-3 text-light2 text-[17px] max-w-3xl leading-[30px] backdrop-blur-md bg-darkGrey bg-opacity-50 rounded-2xl border-transparent p-3"
+          className="mt-3 text-light2 text-[17px] max-xs:text-[10px] max-xs:font-mono max-w-3xl leading-[30px] backdrop-blur-md bg-darkGrey bg-opacity-50 rounded-2xl border-transparent p-3"
         >
           Clubs are a great way to explore your interests, meet new people, and
           have fun outside the classroom. Whether you are into sports, arts,
