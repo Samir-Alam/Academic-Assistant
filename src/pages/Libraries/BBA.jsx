@@ -4,4 +4,4 @@ const BBA = () => {
   )
 }
 
-export default BBA
+export default BBA;
