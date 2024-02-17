@@ -4,6 +4,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { clubs } from "../constants";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const ClubCard = ({ index, name, id, description, image }) => {
   return (
     <motion.div
