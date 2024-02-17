@@ -1,4 +1,3 @@
-<a name="readme-top"></a>
 # Academic-Assistant <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="35" height="35" />
 
 ## Description <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Notebook%20with%20Decorative%20Cover.png" alt="Notebook with Decorative Cover" width="29" height="28" />
