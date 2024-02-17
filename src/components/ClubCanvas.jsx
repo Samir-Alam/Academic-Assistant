@@ -62,13 +62,8 @@ const ClubCanvas = () => {
           Clubs are a great way to explore your interests, meet new people, and
           have fun outside the classroom. Whether you are into sports, arts,
           culture, or social causes, there is a club for you at the college.
-          Here you can find a list of all the clubs available, along with their
-          brief introduction, contact information, and upcoming events. You can
-          also search for a club by name or category, or create your own club if
-          you have an idea. Joining a club is easy and free, just fill out the
-          online form and wait for the confirmation email. Don’t miss this
-          opportunity to enrich your academic experience and make some lasting
-          memories.
+          {window.screen.width > 750 && 
+          "Here you can find a list of all the clubs available, along with their brief introduction, contact information, and upcoming events. You can also search for a club by name or category, or create your own club if you have an idea. Joining a club is easy and free, just fill out the online form and wait for the confirmation email. Don’t miss this opportunity to enrich your academic experience and make some lasting memories." }
         </motion.p>
       </div>
 
