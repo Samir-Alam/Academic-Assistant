@@ -1,4 +1,3 @@
-import group from "../assets/group.jpg";
 import aec from "../assets/aec.png";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
