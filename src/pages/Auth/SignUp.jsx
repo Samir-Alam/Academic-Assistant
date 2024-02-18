@@ -3,6 +3,7 @@ import InputControl from "../../components/InputControl";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebase";
+import { writeUserData } from "../../firebase";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -31,8 +32,10 @@ const SignUp = () => {
         await updateProfile(user, {
           displayName: values.name,
         });
+        writeUserData(user.uid, values.name, values.email, values.pass);
         navigate("/home");
-        // console.log(user);
+
+        console.log(user);
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
