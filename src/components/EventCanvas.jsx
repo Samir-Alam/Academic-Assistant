@@ -22,7 +22,7 @@ const EventCanvas = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#121212", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #121212" }}
-            date="2011 - present"
+            date="2021 - present"
             iconStyle={{ background: "#121212", color: "#fff" }}
             icon={<img src={event.image} alt={event.name} className="rounded-full"/>}
           >

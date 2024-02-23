@@ -29,8 +29,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
+const currUser = auth.currentUser;
 
-const writeUserData = (userId, name, email, pass) => {
+const writeUserData = (userId, name, email, pass, gender) => {
   
     const db = getDatabase();
     const reference = ref(db, "users/" + userId);
@@ -38,8 +39,9 @@ const writeUserData = (userId, name, email, pass) => {
     set(reference, {
     username: name,
     email: email,
-    password: pass
+    password: pass,
+    gender: gender
     });
 }
 
-export { app, auth, writeUserData };
+export { app, auth, writeUserData};
