@@ -19,13 +19,13 @@ const ProfileCanvas = () => {
   const [maleBtn, setMaleBtn] = useState("text-white");
   const [femaleBtn, setFemaleBtn] = useState("text-white");
 
-  onValue(reference, async (snapshot) => {
-    const data = await snapshot.val();
-    if (data.gender === "Male")
-      setMale(true);
-    else
-      setMale(false);
-  });
+  // onValue(reference, async (snapshot) => {
+  //   const data = await snapshot.val();
+  //   if (data.gender === "Male")
+  //     setMale(true);
+  //   else
+  //     setMale(false);
+  // });
   
   const handleMaleGender = () => {
     setMale(true);
@@ -33,8 +33,10 @@ const ProfileCanvas = () => {
     setFemaleBtn('text-white');
     onValue(reference, async (snapshot) => {
       const data = await snapshot.val();
+      // console.log(data.gender);
       if(!set){
         writeUserData(currUser.uid, currUser.displayName, currUser.email, data.password, "Male")
+        // console.log("Changed");
         set = true;
       }
     });
@@ -45,8 +47,10 @@ const ProfileCanvas = () => {
     setMaleBtn('text-white');
     onValue(reference, async (snapshot) => {
       const data = await snapshot.val();
-    if(!set){
-      writeUserData(currUser.uid, currUser.displayName, currUser.email, data.password, "Female")
+      // console.log(data.gender);
+      if(!set){
+        writeUserData(currUser.uid, currUser.displayName, currUser.email, data.password, "Female")
+        // console.log("Changed");
       set = true;
     }
     });
