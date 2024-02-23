@@ -14,11 +14,19 @@ const ProfileCanvas = () => {
   let set = false;
   const db = getDatabase();
   const reference = ref(db, 'users/' + currUser.uid);
-  
 
   const [male, setMale] = useState(true);
   const [maleBtn, setMaleBtn] = useState("text-white");
   const [femaleBtn, setFemaleBtn] = useState("text-white");
+
+  onValue(reference, async (snapshot) => {
+    const data = await snapshot.val();
+    if (data.gender === "Male")
+      setMale(true);
+    else
+      setMale(false);
+  });
+  
   const handleMaleGender = () => {
     setMale(true);
     setMaleBtn("text-blue-600 bg-white scale-120 font-bold");

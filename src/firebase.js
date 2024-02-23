@@ -29,7 +29,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
-const currUser = auth.currentUser;
+// const currUser = auth.currentUser;
 
 const writeUserData = (userId, name, email, pass, gender) => {
   
