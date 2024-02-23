@@ -11,6 +11,7 @@ const SignUp = () => {
     name: "",
     email: "",
     pass: "",
+    gender: null
   });
 
   const [errorMsg, setErrorMsg] = useState("");
@@ -32,7 +33,7 @@ const SignUp = () => {
         await updateProfile(user, {
           displayName: values.name,
         });
-        writeUserData(user.uid, values.name, values.email, values.pass);
+        writeUserData(user.uid, values.name, values.email, values.pass, values.gender);
         navigate("/home");
 
         console.log(user);
