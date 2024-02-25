@@ -3,6 +3,8 @@ import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../utils/motion";
 import { clubs } from "../constants";
 import { Link } from "react-router-dom";
+import { getAuth } from "firebase/auth";
+import add from "../assets/clubs/add-more.png";
 
 // eslint-disable-next-line react/prop-types
 const ClubCard = ({ index, name, id, description, image }) => {
@@ -40,6 +42,8 @@ const ClubCard = ({ index, name, id, description, image }) => {
 };
 
 const ClubCanvas = () => {
+  const currUser = getAuth().currentUser;
+  let ind = clubs.length;
   return (
     <div className="bg-darkPrimary ">
       <motion.div
@@ -71,6 +75,9 @@ const ClubCanvas = () => {
         {clubs.map((project, index) => (
           <ClubCard key={`project-${index}`} index={index} {...project} />
         ))}
+        {currUser.uid === "ZmpUeulhIff6KUBUbYm9KaQAOz13" &&
+          <ClubCard key={`project-null`} index={ind} name="Add More Clubs" id="add-club" discription={null} image={add} />
+        }
       </div>
     </div>
   );
