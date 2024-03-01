@@ -76,7 +76,7 @@ const ClubCanvas = () => {
           <ClubCard key={`project-${index}`} index={index} {...project} />
         ))}
         {currUser.uid === "ZmpUeulhIff6KUBUbYm9KaQAOz13" &&
-          <ClubCard key={`project-null`} index={ind} name="Add More Clubs" id="add-club" discription={null} image={add} />
+          <ClubCard key={`project-null`} index={ind} name="Add More Clubs" id="addclub" discription={null} image={add} />
         }
       </div>
     </div>
