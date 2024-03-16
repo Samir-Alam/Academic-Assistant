@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../utils/motion";
-// import { clubs } from "../constants";
 import { Link } from "react-router-dom";
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import add from "../assets/clubs/add-more.png";
-import { getDatabase, onValue, ref } from "firebase/database";
+import { getDatabase, off, onValue, ref } from "firebase/database";
 import {Trash2} from 'lucide-react'
 import { deleteClubData } from "../firebase";
+import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 const ClubCard = ({ index, name, id, description, image }) => {
@@ -64,11 +64,23 @@ const ClubCanvas = () => {
       allClubs.push(club.val());
     })
   })
-  
-  console.log(allClubs);
-  const currUser = getAuth().currentUser;
-  const uid = currUser.uid != null? currUser.uid : "";
+  const [uid, setUid] = useState("");
+  const auth = getAuth();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUid(currentUser.uid);
+      } else {
+        setUid("");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  // const uid = currUser.uid != null? currUser.uid : "";
   let ind = allClubs.length;
+  
   return (
     <div className="bg-darkPrimary ">
       <motion.div
@@ -100,10 +112,6 @@ const ClubCanvas = () => {
         {allClubs.map((club, index) => (
           <ClubCard key={`project-${index}`} index={index} name={club.name} id={club.id} description={club.description} image={club.image}/>
         ))}
-
-        {/* {clubs.map((project, index) => (
-          <ClubCard key={`project-${index}`} index={index} {...project} />
-        ))} */}
         
         {uid === "ZmpUeulhIff6KUBUbYm9KaQAOz13" &&
           <ClubCard key={`project-null`} index={ind} name="Add More Clubs" id="addclub" discription={null} image={add} />
