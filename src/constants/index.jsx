@@ -91,10 +91,12 @@ export const clubs = [
     name: "Tech Club",
     id: "tech",
     description:
-      "A club for students who are enthusiastic about technology and innovation. You can learn about the latest trends and developments in the tech industry and society. You can also discuss and debate various issues and topics related to technology with other tech-savvy people. This club will help you stay updated.",
+      "A club for students who are enthusiastic about technology and innovation. You can learn about the latest trends and developments in the tech industry and society. You can also discuss and debate various issues and topics related to technology with other tech-savvy people.",
     image: Tech_club,
   },
 ];
+
+
 
 export const events = [
   {
