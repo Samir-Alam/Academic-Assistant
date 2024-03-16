@@ -1,13 +1,24 @@
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../utils/motion";
-import { clubs } from "../constants";
+// import { clubs } from "../constants";
 import { Link } from "react-router-dom";
 import { getAuth } from "firebase/auth";
 import add from "../assets/clubs/add-more.png";
+import { getDatabase, onValue, ref } from "firebase/database";
+import {Trash2} from 'lucide-react'
+import { deleteClubData } from "../firebase";
 
 // eslint-disable-next-line react/prop-types
 const ClubCard = ({ index, name, id, description, image }) => {
+
+  const handleDelete = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    deleteClubData(id);
+    console.log("Deleted Successfully");
+    
+  }
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
@@ -29,6 +40,8 @@ const ClubCard = ({ index, name, id, description, image }) => {
               alt="club_image"
               className="w-full h-full object-cover rounded-2xl"
             />
+
+            {id != "addclub" && <button className="absolute top-1 right-1 hover:scale-120" onClick={handleDelete}><Trash2 className="text-white opacity-60 hover:opacity-100 hover:transition-all"/></button>}
           </div>
 
           <div className="mt-5">
@@ -42,8 +55,20 @@ const ClubCard = ({ index, name, id, description, image }) => {
 };
 
 const ClubCanvas = () => {
+
+  const db = getDatabase();
+  const reference = ref(db, "/clubs")
+  const allClubs = [];
+  onValue(reference, async (snapshot) => {
+    await snapshot.forEach((club) => {
+      allClubs.push(club.val());
+    })
+  })
+  
+  console.log(allClubs);
   const currUser = getAuth().currentUser;
-  let ind = clubs.length;
+  const uid = currUser.uid != null? currUser.uid : "";
+  let ind = allClubs.length;
   return (
     <div className="bg-darkPrimary ">
       <motion.div
@@ -72,10 +97,15 @@ const ClubCanvas = () => {
       </div>
 
       <div className="ml-20 max-xs:ml-5 mt-20 max-xs:mt-10 flex flex-wrap gap-7 max-xs:gap-4">
-        {clubs.map((project, index) => (
-          <ClubCard key={`project-${index}`} index={index} {...project} />
+        {allClubs.map((club, index) => (
+          <ClubCard key={`project-${index}`} index={index} name={club.name} id={club.id} description={club.description} image={club.image}/>
         ))}
-        {currUser.uid === "ZmpUeulhIff6KUBUbYm9KaQAOz13" &&
+
+        {/* {clubs.map((project, index) => (
+          <ClubCard key={`project-${index}`} index={index} {...project} />
+        ))} */}
+        
+        {uid === "ZmpUeulhIff6KUBUbYm9KaQAOz13" &&
           <ClubCard key={`project-null`} index={ind} name="Add More Clubs" id="addclub" discription={null} image={add} />
         }
       </div>
