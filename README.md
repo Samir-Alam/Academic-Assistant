@@ -12,31 +12,45 @@
 * __Databases__ - _Firebase RTDB_
 * __Hosting__ -   _Firebase Hosting_
 
+<hr>
+
 # Getting Started
-    This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+
+# Demo
+
+VISIT ➡️ [Click Here 🚀](academic-assistant-0001.firebaseapp.com) ⭕R [Alt](academic-assistant-0001.web.app)
+
+![img](https://i.pinimg.com/736x/bc/34/0f/bc340fab55b1f9edbacce1f98d563af9.jpg)
 
 ## Prerequisites
-    This is an example of how to list things you need to use the software and how to install them.
+    
+This is an example of how to list things you need to use the software and how to install them.
 
 - npm
 ```
 npm install npm@latest -g
 ```
 ## Installation
-    Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services.
+
+Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services.
 
 - Clone the repo
-```
+
+```bash
 git clone https://github.com/your_username_/Project-Name.git
 ```
 
 - Install NPM packages
-```
+
+```bash
 npm install
 ```
 
 - Run the app
-```
+
+```bash
 npm run dev
 ```
 
