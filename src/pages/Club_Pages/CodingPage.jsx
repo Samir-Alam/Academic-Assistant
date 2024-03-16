@@ -4,6 +4,7 @@ const CodingPage = () => {
   return (
     <div>
         <Navbar />
+        
     </div>
   )
 }
