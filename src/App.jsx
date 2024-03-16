@@ -24,6 +24,7 @@ import BCA from "./pages/Libraries/BCA"
 import CIVIL from "./pages/Libraries/CIVIL"
 import EE from "./pages/Libraries/EE"
 import ME from "./pages/Libraries/ME"
+import AddPage from "./pages/Club_Pages/AddPage";
 
 const App = () => {
   const [userName, setUserName] = useState("");
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/civil" element={<CIVIL />} />
           <Route path="/bba" element={<BBA />} />
           <Route path="/bca" element={<BCA />} />
+          <Route path="/addclub" element={<AddPage />} />
         </Routes>
       </BrowserRouter>
     </div>
