@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, remove } from "firebase/database";
+import { getStorage, uploadBytes } from "firebase/storage";
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyCOforGRrhOxYuni04XTwdXfKnoiK6mn5Y",
@@ -31,6 +32,10 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 // const currUser = auth.currentUser;
 
+// const firebaseApp = getApp();
+
+const imgObj = getStorage(app);
+
 const writeUserData = (userId, name, email, pass, gender) => {
   
     const db = getDatabase();
@@ -44,4 +49,32 @@ const writeUserData = (userId, name, email, pass, gender) => {
     });
 }
 
-export { app, auth, writeUserData};
+const writeClubsData = (name, id, description, image) => {
+  const db = getDatabase();
+  const reference = ref(db, "clubs/" + id);
+  set(reference
+    ,{
+      name: name,
+      id: id,
+      description: description,
+      image: image
+    });
+}
+
+const deleteClubData = async (id) => {
+  const db = getDatabase();
+  const reference = ref(db, "clubs/" + id);
+  await remove(reference);
+}
+
+const uploadImage = async (img) => {
+  const storage = getStorage();
+  const reference = ref(storage, `images/clubs/${img.name}`)
+  // const storageRef = ref(imgObj, `images/clubs/${img.name}`)
+  uploadBytes(reference, img).then((snapshot) => {
+    console.log('Uploaded a blob or file!');
+    console.log(snapshot);
+  });
+}
+
+export { app, auth, writeUserData, writeClubsData, deleteClubData, uploadImage, imgObj};
