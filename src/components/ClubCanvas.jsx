@@ -4,6 +4,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { Link } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import add from "../assets/clubs/add-more.png";
+// import { clubs } from "../constants";
 import { getDatabase, off, onValue, ref } from "firebase/database";
 import {Trash2} from 'lucide-react'
 import { deleteClubData } from "../firebase";
